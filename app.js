@@ -63,7 +63,10 @@ app.get('/logout', (req,res) => {
     })
 });
 
-app.listen(3002 , () => {console.log('server started')});
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => { console.log(`Server started on port ${PORT}`);
+});
 
 
 let users = [];
